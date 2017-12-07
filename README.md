@@ -8,3 +8,6 @@ Upcoming tasks:
  * setup a workflow
  * user stories
  * create issues and a lot more....
+
+Tasks done:
+ * github integration to slack channel
