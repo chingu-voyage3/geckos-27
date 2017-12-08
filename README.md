@@ -13,11 +13,16 @@ Upcoming tasks:
 Tasks done:
  * github integration to slack channel
 
-### Workflow for Github
+### Workflow for Github (TEAM-MEMBERS)
+* Fork this repository
+* clone this repository keep two different directories
+* the fork will be used for making PR for your changes.
+* The clone will be used to review someone else's work.
+
+
+__ Task 1 __
+* setup the github repo
+* add yourself to the team list and make a PR(would count as a contribution from everyone's side).
 
 ### Team members:-
 
-[<img alt="abhishek71994" src="https://avatars1.githubusercontent.com/u/8072400?v=4&s=117" width="117">](https://github.com/abhishek71994)
-[<img alt="himansh58" src="https://avatars3.githubusercontent.com/u/18519168?s=400&v=4" width="117">](https://github.com/himansh58)
-[<img alt="sanchitbansal10" src="https://avatars1.githubusercontent.com/u/16536741?s=400&v=4" width="117">](https://github.com/sanchitbansal10)
-[<img alt="coderark" src="https://avatars0.githubusercontent.com/u/8248222?s=400&v=4" width="117">](https://github.com/coderark)
