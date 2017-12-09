@@ -27,3 +27,5 @@ __ Task 1 __
 ### Team members:-
 
 [<img alt="abhishek71994" src="https://avatars1.githubusercontent.com/u/8072400?v=4&s=117" width="117">](https://github.com/abhishek71994)
+
+[<img alt="sanchitbansal10" src="https://avatars2.githubusercontent.com/u/16536741?v=4" width="117">](https://github.com/sanchitbansal10)
