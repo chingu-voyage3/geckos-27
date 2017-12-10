@@ -13,6 +13,15 @@ Upcoming tasks:
 Tasks done:
  * github integration to slack channel
 
+### checklist of upcoming tasks
+
+- [ ] finalizing which api
+- [ ] wireframe
+- [ ] react project setup with eslint
+- [ ] react-router and redux(check how to inculcate that)
+- [ ] play one song from a static playlist
+- [ ] populate and manipulate redux store
+
 ### Workflow for Github (TEAM-MEMBERS)
 * Fork this repository
 * clone this repository keep two different directories
