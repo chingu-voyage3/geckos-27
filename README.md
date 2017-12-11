@@ -4,14 +4,17 @@
 Upcoming tasks:
 
  * create template
- * ~~integrate tools~~
- * __setup a workflow__
+ * ~~integrate github tool~~
+ * ~~setup a workflow~~
  * ~~add team members to readMe~~
  * user stories
  * create issues and a lot more....
 
 Tasks done:
  * github integration to slack channel
+ * integrate github tool
+ * setup a workflow
+ * add team members to readMe
 
 ### checklist of upcoming tasks
 
@@ -28,10 +31,7 @@ Tasks done:
 * the fork will be used for making PR for your changes.
 * The clone will be used to review someone else's work.
 
-
-__ Task 1 __
-* setup the github repo
-* add yourself to the team list and make a PR(would count as a contribution from everyone's side).
+__Task 1 completed please adhere to workflow rules__
 
 ### Team members:-
 
