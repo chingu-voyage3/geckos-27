@@ -1,13 +1,19 @@
-import React, { Component } from 'react';
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <p>This is the spotify clone</p>
-      </div>
-    );
-  }
+import React,{Component} from 'react';
+import HomePage from './components/Home';
+import Api from './api';
+class App extends Component{
+	state={
+		results:''
+	}
+	render(){
+		Api.getAlbums();
+		return(
+		<div>
+			<HomePage/>
+			set url
+		</div>
+		)
+	}
 }
 
 export default App;
