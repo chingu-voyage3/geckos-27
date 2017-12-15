@@ -1,12 +1,11 @@
 import React,{Component} from 'react';
-import HomePage from './components/Home';
+import Albums from './components/Albums';
 class App extends Component{
 	render(){
 		// Api.GetAlbums;
 		return(
 		<div>
-			<HomePage/>
-			set url
+			<Albums/>
 		</div>
 		)
 	}
