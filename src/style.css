@@ -1,0 +1,86 @@
+/*
+	button color: #00DD48
+*/
+
+body{
+	background-color: #181818;
+	color: #fff;
+	margin: 0;
+	font-family: sans-serif;
+	padding: 0;
+}
+/*-----------
+Sidebar
+------------*/
+.Side{
+	background-color: #282828;
+	float: left;
+	height: 100vh;
+	position: fixed;
+	width: 20%;
+}
+.searchSection{
+	display: inline-block;
+}
+.menuSection{
+	margin: 23px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	padding: 23px;
+}
+.searchInput{
+	background-color: transparent;
+	border: transparent;
+	color: #fff;
+	float: left;
+	font-size: 22px;
+	width: 70%;
+}
+.searchSubmit{
+	float: right;
+	color: grey;
+}
+.sideMenu a{
+	display: block;
+	text-decoration: none;
+	padding-left: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	color: #989898;
+	font-size: 20px;
+	margin-top: 4px;
+	margin-left: -10px;
+	/*border-left: 4px solid transparent;*/
+	transition: linear color 0.4s;
+}
+.sideMenu a:hover{
+	/*border-left: 4px solid #00DD48;*/
+	color: #00DD48;
+}
+
+/*-----------
+Component Grid
+------------*/
+.Grid{
+	margin: 0 20%;
+}
+.GridItem{
+	display: flex;
+  	flex-wrap: wrap;
+	text-align: center;
+}
+.itembox{
+	flex: 1 0 20%;
+}
+/*-----------
+Buttons
+------------*/
+button{
+	background-color: transparent;
+	border: transparent;
+	color: #fff;
+}
+.spotIcon{
+	float: left;
+	margin-top: 7px;
+}
