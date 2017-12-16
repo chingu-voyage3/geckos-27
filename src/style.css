@@ -62,15 +62,14 @@ Sidebar
 Component Grid
 ------------*/
 .Grid{
-	margin: 0 20%;
+	margin: 0 0 0 27%;
+	display: flex;
+	text-align: center;
+	flex-flow: row wrap;
+	padding: 10px;
 }
 .GridItem{
-	display: flex;
-  	flex-wrap: wrap;
-	text-align: center;
-}
-.itembox{
-	flex: 1 0 20%;
+	margin: 2% 3% 0 5%;
 }
 /*-----------
 Buttons
