@@ -61,8 +61,10 @@ Sidebar
 /*-----------
 Component Grid
 ------------*/
+.GridSection{
+	margin-left: 27%;
+}
 .Grid{
-	margin: 0 0 0 27%;
 	display: flex;
 	text-align: center;
 	flex-flow: row wrap;

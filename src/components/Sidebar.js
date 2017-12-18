@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import '../style.css';
 import * as FontAwesome from 'react-icons/lib/fa';
+import { Link } from 'react-router-dom';
 class Sidebar extends Component{
 	render(){
 		return(
@@ -24,19 +25,19 @@ class Sidebar extends Component{
 				</div>
 				<div className="menuSection">
 					<div className="sideMenu">
-						<a href="#" className="menuElements">Browse</a>
-						<a href="#" className="menuElements">Radio</a>
+						<Link to='/' className="menuElements">Browse</Link>
+						<Link to='/radio' className="menuElements">Radio</Link>
 					</div>
 				</div>
 				<div className="menuSection">
 					<div className="sideMenu">
-						<a href="#" className="menuElements">Albums</a>
-						<a href="#" className="menuElements">Artists</a>
+						<Link to='/albums' className="menuElements">Albums</Link>
+						<Link to='/artists' className="menuElements">Artists</Link>
 					</div>
 				</div>
 				<div className="menuSection">
 					<div className="sideMenu">
-						<a href="#" className="menuElements">About Us</a>
+						<Link to='/aboutus' className="menuElements">About Us</Link>
 						<a href="#" className="menuElements">Github</a>
 					</div>
 				</div>
