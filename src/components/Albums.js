@@ -16,7 +16,6 @@ class Albums extends Component{
 				{this.state.result.map(alb=>(
 					<div className="GridItem" key={alb.id} >
 						<div className="itembox">
-							<h6>{alb.name}</h6>
 							<a href={alb.shorturl} target="_blank"><img src={alb.image} alt={alb.shorturl}></img></a>
 						</div>
 					</div>
