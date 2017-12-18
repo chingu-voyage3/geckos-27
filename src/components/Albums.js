@@ -1,6 +1,8 @@
 import React,{ Component } from 'react';
+import '../style.css'; 
 const apiLink = 'https://api.jamendo.com/v3.0';
-const apiFormat = '?client_id=5adf7db0&format=jsonpretty'; 
+const apiFormat = '?client_id=5adf7db0&format=jsonpretty';
+
 class Albums extends Component{
 	state={
 		result:[]
@@ -10,11 +12,13 @@ class Albums extends Component{
 	}
 	render(){
 		return(
-			<div>
+			<div className="Grid">
 				{this.state.result.map(alb=>(
-					<div key={alb.id}>
-						<h4>{alb.name}</h4>
-						<img src={alb.image}></img>
+					<div className="GridItem" key={alb.id} >
+						<div className="itembox">
+							<h6>{alb.name}</h6>
+							<a href={alb.shorturl} target="_blank"><img src={alb.image} alt={alb.shorturl}></img></a>
+						</div>
 					</div>
 					))}
 			</div>
