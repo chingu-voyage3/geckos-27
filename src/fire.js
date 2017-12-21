@@ -9,5 +9,5 @@ var config = {
   storageBucket: FIREBASE.STORAGE_BUCKET,
   messagingSenderId: FIREBASE.MESSAGING_SENDER_ID
 };
-
-export default firebase.initializeApp(config);
+firebase.initializeApp(config);
+export default firebase;
