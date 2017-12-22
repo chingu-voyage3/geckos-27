@@ -1,6 +1,5 @@
 import React,{ Component } from 'react';
 import '../style.css';
-
 class Artists extends Component{
 	render(){
 		return(

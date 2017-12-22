@@ -1,6 +1,5 @@
 import React,{ Component } from 'react';
 import '../style.css';
-
 class Radio extends Component{
 	render(){
 		return(
