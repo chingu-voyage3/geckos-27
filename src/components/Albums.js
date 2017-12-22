@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { BrowserRouter as Router,Link,Route } from 'react-router-dom';
+import { Switch,NavLink,Route } from 'react-router-dom';
 import '../style.css'; 
 const apiLink = 'https://api.jamendo.com/v3.0';
 const apiFormat = '?client_id=5adf7db0&format=jsonpretty';
@@ -14,18 +14,18 @@ class Albums extends Component{
 	}
 	render(){
 		return(
-			<Router>
+			<Switch>
 				<div className="Grid">
 					{this.state.result.map(alb=>(
 							<div className="GridItem" key={alb.id}>
 								<div className="itembox">
-									<Link exact to={`/g/${alb.id}`}><img src={alb.image} alt={alb.shorturl}></img></Link>
+									<NavLink exact to={`/g/${alb.id}`}><img src={alb.image} alt={alb.shorturl}></img></NavLink>
 								</div>
 							</div>
 						))}
 				</div>
 
-			</Router>
+			</Switch>
 			)
 		
 	}
