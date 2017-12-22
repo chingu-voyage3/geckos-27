@@ -27,7 +27,7 @@ class Albums extends Component{
 					))}
 			</div>
 			)
-		
+
 	}
 }
 
