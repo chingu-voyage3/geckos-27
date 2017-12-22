@@ -8,9 +8,9 @@ class Sidebar extends Component{
 			<div className="Side">
 				<button className="spotIcon">
 					<FontAwesome.FaSpotify
-					size={50}/>
+						size={50}/>
 				</button>
-				
+
 				<h2>Findify</h2>
 				<div className="menuSection">
 					<form className="searchSection">
@@ -19,7 +19,7 @@ class Sidebar extends Component{
 					  </label>
 					  <button className="searchSubmit">
 							<FontAwesome.FaSearch
-							size={25}/>
+								size={25}/>
 					  </button>
 					</form>
 				</div>
@@ -33,6 +33,7 @@ class Sidebar extends Component{
 					<div className="sideMenu">
 						<Link to='/albums' className="menuElements">Albums</Link>
 						<Link to='/artists' className="menuElements">Artists</Link>
+						<Link to='/randomplay' className="menuElements">Most Famous</Link>
 					</div>
 				</div>
 				<div className="menuSection">
@@ -41,9 +42,9 @@ class Sidebar extends Component{
 						<a href="#" className="menuElements">Github</a>
 					</div>
 				</div>
-				
+
 			</div>
-			
+
 			)
 	}
 }
