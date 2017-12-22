@@ -32,7 +32,7 @@ constructor(){
           <div className="itembox" >
             <h6>{song.name}</h6>
             <img src={song.image} alt={song.shorturl} />
-            <Play url='songs.audio' />
+            <Play url={song.audio} />
           </div>
         </div>
       ))}
