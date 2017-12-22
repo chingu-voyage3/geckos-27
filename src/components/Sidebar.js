@@ -2,7 +2,17 @@ import React,{ Component } from 'react';
 import '../style.css';
 import * as FontAwesome from 'react-icons/lib/fa';
 import { Link } from 'react-router-dom';
+import fire from './../fire';
 class Sidebar extends Component{
+
+	signOut(){
+		fire.auth().signOut().then(()=>{
+			console.log("Signed out.")
+		}).catch((err)=>{
+			console.log(err);
+		})
+	}
+
 	render(){
 		return(
 			<div className="Side">
@@ -42,7 +52,7 @@ class Sidebar extends Component{
 						<a href="#" className="menuElements">Github</a>
 					</div>
 				</div>
-
+				<button onClick={this.signOut.bind(this)} className="logout">LogOut</button>
 			</div>
 
 			)
