@@ -21,7 +21,7 @@ class Albums extends Component{
 					<div className="GridItem" key={alb.id} >
 						<div className="itembox">
 							<h6>{alb.name}</h6>
-							<a href={alb.shorturl} target="_blank"><img src={alb.image} alt={alb.shorturl}></img></a>
+							<a href={alb.shorturl} target="_blank"><img src={alb.image} alt={alb.shorturl} /></a>
 						</div>
 					</div>
 					))}
