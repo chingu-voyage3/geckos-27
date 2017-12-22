@@ -1,8 +1,9 @@
 import React,{ Component } from 'react';
-import '../style.css';
 import * as FontAwesome from 'react-icons/lib/fa';
 import { Link } from 'react-router-dom';
+import '../style.css';
 import fire from './../fire';
+
 class Sidebar extends Component{
 
 	signOut(){
