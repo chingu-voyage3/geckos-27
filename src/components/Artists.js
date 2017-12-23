@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import '../style.css'; 
+
 const apiLink = 'https://api.jamendo.com/v3.0';
 const apiFormat = '?client_id=5adf7db0&format=jsonpretty';
 

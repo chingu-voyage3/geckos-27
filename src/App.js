@@ -5,9 +5,11 @@ import Radio from './components/Radio';
 import SongList from './components/Songlist';
 import Artists from './components/Artists';
 import AboutUs from './components/AboutUs';
+import RandomPlay from './components/RandomPlay'
 import Login from './components/Login';
 import { Switch,Route } from 'react-router-dom';
 import fire from './fire';
+
 class App extends Component{
 	constructor(props){
 		super(props);
@@ -43,9 +45,9 @@ class App extends Component{
 							<Route exact path="/radio" component={Radio} />
 							<Route exact path="/artists" component={Artists} />
 							<Route exact path="/aboutus" component={AboutUs} />
-							<Route exact path="/g/:albid" component={SongList}/>
-
-						</div>
+              <Route exact path="/g/:albid" component={SongList}/>
+							<Route exact path="/randomplay" component={RandomPlay} />
+            </div>
 					</Switch>
 				</div>:
 				<Login/>
