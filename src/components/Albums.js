@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import { Switch,NavLink } from 'react-router-dom';
 import '../style.css'; 
 
 const apiLink = 'https://api.jamendo.com/v3.0';
@@ -16,19 +17,22 @@ class Albums extends Component{
 	}
 	render(){
 		return(
-			<div className="Grid">
-				{this.state.result.map(alb=>(
-					<div className="GridItem" key={alb.id} >
-						<div className="itembox">
-							<h6>{alb.name}</h6>
-							<a href={alb.shorturl} target="_blank"><img src={alb.image} alt={alb.shorturl} /></a>
-						</div>
-					</div>
-					))}
-			</div>
+
+			<Switch>
+				<div className="Grid">
+					{this.state.result.map(alb=>(
+							<div className="GridItem" key={alb.id}>
+								<div className="itembox">
+									<NavLink exact to={`/g/${alb.id}`}><img src={alb.image} alt={alb.shorturl}></img></NavLink>
+								</div>
+							</div>
+						))}
+				</div>
+			</Switch>
 			)
 
 	}
 }
 
 export default Albums;
+
