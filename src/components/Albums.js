@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
-import { Switch,NavLink } from 'react-router-dom';
-import '../style.css'; 
+import { NavLink } from 'react-router-dom';
+import '../style.css';
+import Download from './Download';
 
 const apiLink = 'https://api.jamendo.com/v3.0';
 const apiFormat = '?client_id=5adf7db0&format=jsonpretty';
@@ -24,6 +25,8 @@ class Albums extends Component{
 							<div className="GridItem" key={alb.id}>
 								<div className="itembox">
 									<NavLink exact to={`/g/${alb.id}`}><img src={alb.image} alt={alb.shorturl} /></NavLink>
+									<div><h4>{alb.name}</h4></div>
+									<div><Download downloadUrl={alb.zip} /></div>
 								</div>
 							</div>
 						))}
