@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import '../style.css';
+import Play from'./Play'
+
 const apiLink = 'https://api.jamendo.com/v3.0';
 const apiFormat = '?client_id=5adf7db0&format=jsonpretty';
+
 class Songlist extends Component{
 	state={
 		result:[]
@@ -15,7 +18,9 @@ class Songlist extends Component{
 				{this.state.result.map(alb=>(
 							<div className="playItem" key={alb.id}>
 								<div className="itembox">
-									<img src={alb.album_image} alt={alb.album_name}></img>{alb.name}
+									<img src={alb.image} alt={alb.name} />
+									<div>{alb.name}</div>
+									<Play url={alb.audio} />
 								</div>
 							</div>
 						))}

@@ -45,11 +45,11 @@ class App extends Component{
 							<Route exact path="/radio" component={Radio} />
 							<Route exact path="/artists" component={Artists} />
 							<Route exact path="/aboutus" component={AboutUs} />
-              <Route exact path="/g/:albid" component={SongList}/>
+              				<Route exact path="/g/:albid" component={SongList}/>
 							<Route exact path="/randomplay" component={RandomPlay} />
-            </div>
+            			</div>
 					</Switch>
-				</div>:
+			</div>:
 				<Login/>
 			}
 			</div>

@@ -18,17 +18,17 @@ class Albums extends Component{
 	render(){
 		return(
 
-			<Switch>
+			
 				<div className="Grid">
 					{this.state.result.map(alb=>(
 							<div className="GridItem" key={alb.id}>
 								<div className="itembox">
-									<NavLink exact to={`/g/${alb.id}`}><img src={alb.image} alt={alb.shorturl}></img></NavLink>
+									<NavLink exact to={`/g/${alb.id}`}><img src={alb.image} alt={alb.shorturl} /></NavLink>
 								</div>
 							</div>
 						))}
 				</div>
-			</Switch>
+		
 			)
 
 	}
