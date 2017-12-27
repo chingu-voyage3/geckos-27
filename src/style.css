@@ -64,6 +64,11 @@ Component Grid
 ------------*/
 .GridSection{
 	margin-left: 27%;
+	height: 100vh;
+	background-color: #181818;
+}
+.sem{
+	background-color: #181818!important;
 }
 .Grid{
 	display: flex;
