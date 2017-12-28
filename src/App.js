@@ -47,7 +47,7 @@ class App extends Component{
 		return(
 			<div>
 				{this.state.signedIn?
-				<div>
+				<div >
 			        <button className="spotIcon" onClick={this.toggle}>
 						<FontAwesome.FaSpotify
 							size={50}/>
@@ -69,25 +69,25 @@ class App extends Component{
 							</form>
 						</Menu.Item>		
 			            <Menu.Item name='home'>
-			              <Link to='/' className="menuElements">Browse</Link>
+			              <Link to='/' className="menuElements" onClick={this.toggle}>Browse</Link>
 			            </Menu.Item>
 			            <Menu.Item>
-			            	<Link to='/radio' className="menuElements">Radio</Link>
+			            	<Link to='/radio' className="menuElements" onClick={this.toggle}>Radio</Link>
 			            </Menu.Item>
 			            <Menu.Item>
-			            	<Link to='/albums' className="menuElements">Albums</Link>
+			            	<Link to='/albums' className="menuElements" onClick={this.toggle}>Albums</Link>
 			            </Menu.Item>
 			            <Menu.Item>
-			            	<Link to='/artists' className="menuElements">Artists</Link>
+			            	<Link to='/artists' className="menuElements" onClick={this.toggle}>Artists</Link>
 			            </Menu.Item>
 			            <Menu.Item>
-			            	<Link to='/randomplay' className="menuElements">Most Famous</Link>
+			            	<Link to='/randomplay' className="menuElements" onClick={this.toggle}>Most Famous</Link>
 			            </Menu.Item>
 			            <Menu.Item>
-			            	<Link to='/aboutus' className="menuElements">About Us</Link>
+			            	<Link to='/aboutus' className="menuElements" onClick={this.toggle}>About Us</Link>
 			            </Menu.Item>
 			            <Menu.Item>
-			            	<a href="#" className="menuElements">Github</a>
+			            	<a href="#" className="menuElements" onClick={this.toggle}>Github</a>
 			            </Menu.Item>
 			            <Menu.Item>
 			            	<Button onClick={this.signOut.bind(this)}>LogOut</Button>

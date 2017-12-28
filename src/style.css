@@ -23,12 +23,6 @@ Sidebar
 .searchSection{
 	display: inline-block;
 }
-.menuSection{
-	margin: 20px;
-	border-top: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	padding: 23px;
-}
 .searchInput{
 	background-color: transparent;
 	border: transparent;
@@ -41,19 +35,6 @@ Sidebar
 	float: right;
 	color: grey;
 }
-.sideMenu a{
-	display: block;
-	text-decoration: none;
-	padding-left: 8px;
-	padding-top: 3px;
-	padding-bottom: 1px;
-	color: #989898;
-	font-size: 110%;
-	margin-top: 1px;
-	margin-left: -10px;
-	/*border-left: 4px solid transparent;*/
-	transition: linear color 0.4s;
-}
 .sideMenu a:hover{
 	/*border-left: 4px solid #00DD48;*/
 	color: #00DD48;
@@ -63,25 +44,25 @@ Sidebar
 Component Grid
 ------------*/
 .GridSection{
-	margin-left: 27%;
-	height: 100vh;
-	background-color: #181818;
+	min-height: 100vh;
 }
 .sem{
 	background-color: #181818!important;
 }
 .Grid{
+	background-color: #181818;
 	display: flex;
 	text-align: center;
-	flex-flow: row wrap;
 	padding: 10px;
+	min-height: 100vh;
+	flex-wrap: wrap;
 }
 .GridItem{
-	margin: 2% 3% 0 5%;
-	box-shadow: 0 3px 6px rgba(255,255,255,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	width: calc(33.33333% - 10px);
+	padding: 10px;
 }
-.playItem{
-	margin: 2% 3% 0 5%;
+.enclosing{
+	border: 3px solid white;
 }
 /*-----------
 Buttons
@@ -92,8 +73,8 @@ button{
 	color: #fff;
 }
 .spotIcon{
-	float: left;
 	margin-top: 7px;
+	margin-bottom: -4px;
 }
 .logout{
 	margin-left: 15%;
