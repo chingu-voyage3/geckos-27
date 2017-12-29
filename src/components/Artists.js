@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import '../style.css'; 
 
 const apiLink = 'https://api.jamendo.com/v3.0';
@@ -15,11 +16,13 @@ class Artists extends Component{
 		return(
 			<div className="Grid">
 				{this.state.result.map(alb=>(
-					<div className="GridItem" key={alb.id} >
-						<div className="itembox">
-							<a href={alb.shorturl} target="_blank"><img src={alb.image} alt={alb.name}></img></a>
+					(alb.image)&&(
+						<div className="GridItem" key={alb.id} >
+							<div className="itembox">
+								<NavLink exact to={`/g/${alb.id}`}><img src={alb.image} alt={alb.shorturl} /></NavLink>
+							</div>
 						</div>
-					</div>
+					)
 					))}
 			</div>
 			)

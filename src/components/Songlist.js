@@ -17,7 +17,7 @@ class Songlist extends Component{
 		return(
 			<div className="Grid">
 				{this.state.result.map(alb=>(
-							<div className="playItem" key={alb.id}>
+							<div className="GridItem" key={alb.id}>
 								<div className="itembox">
 									<img src={alb.image} alt={alb.name} />
 									<div>{alb.name}</div>
