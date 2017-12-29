@@ -11,7 +11,7 @@ class ArtistSonglist extends Component{
 		result:[]
 	}
 	componentDidMount(){
-		fetch(`${apiLink}/artists/tracks/${apiFormat}&artist_id=${this.props.match.params.artid}`).then(res => res.json()).then(d => {this.setState({result:d.results[0].tracks}),console.log(this.state,this.props.match.params.artid)});
+		fetch(`${apiLink}/artists/tracks/${apiFormat}&name=${this.props.match.params.artid}`).then(res => res.json()).then(d => {this.setState({result:d.results[0].tracks})});
 	}
 	render(){
 		return(

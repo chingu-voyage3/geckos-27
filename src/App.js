@@ -10,7 +10,7 @@ import Login from './components/Login';
 import * as FontAwesome from 'react-icons/lib/fa';
 import { Link } from 'react-router-dom';
 import { Switch,Route } from 'react-router-dom';
-import { Sidebar, Segment, Button, Menu, Image, Icon, Header } from 'semantic-ui-react'
+import { Sidebar, Segment, Button, Menu } from 'semantic-ui-react'
 import fire from './fire';
 
 class App extends Component{

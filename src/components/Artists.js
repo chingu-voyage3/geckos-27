@@ -10,7 +10,7 @@ class Artists extends Component{
 		result:[]
 	}
 	componentDidMount(){
-		fetch(`${apiLink}/artists/${apiFormat}`).then(res => res.json()).then(d => this.setState({result:d.results}),console.log(this.state));
+		fetch(`${apiLink}/artists/${apiFormat}`).then(res => res.json()).then(d => this.setState({result:d.results}), console.log(this.state));
 	}
 	render(){
 		return(
@@ -19,7 +19,7 @@ class Artists extends Component{
 					(art.image)&&(
 						<div className="GridItem" key={art.id} >
 							<div className="itembox">
-								<NavLink exact to={`/a/${art.id}`}><img src={art.image} alt={art.shorturl} /></NavLink>
+								<NavLink exact to={`/a/${art.name.toLowerCase().replace(' ','+')}`}><img src={art.image} alt={art.shorturl} /></NavLink>
 							</div>
 						</div>
 					)
