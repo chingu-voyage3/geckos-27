@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import '../style.css';
-import Play from'./Play';
-import Download from './Download';
+import '../../style.css';
+import Play from'../Play';
+import Download from '../Download';
 
 const apiLink = 'https://api.jamendo.com/v3.0';
 const apiFormat = '?client_id=5adf7db0&format=jsonpretty';
 
-class Songlist extends Component{
+class AlbumSonglist extends Component{
 	state={
 		result:[]
 	}
@@ -30,4 +30,4 @@ class Songlist extends Component{
 			);
 	}
 }
-export default Songlist;
+export default AlbumSonglist;

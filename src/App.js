@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import Albums from './components/Albums';
 import Radio from './components/Radio';
-import SongList from './components/Songlist';
+import AlbumSongList from './components/songlist/AlbumSonglist';
+import ArtistSongList from './components/songlist/ArtistSonglist';
 import Artists from './components/Artists';
 import AboutUs from './components/AboutUs';
 import RandomPlay from './components/RandomPlay'
@@ -103,7 +104,8 @@ class App extends Component{
 										<Route exact path="/radio" component={Radio} />
 										<Route exact path="/artists" component={Artists} />
 										<Route exact path="/aboutus" component={AboutUs} />
-			              				<Route exact path="/g/:albid" component={SongList}/>
+			              				<Route exact path="/g/:albid" component={AlbumSongList}/>
+			              				<Route exact path="/a/:artid" component={ArtistSongList}/>
 										<Route exact path="/randomplay" component={RandomPlay} />
 			            			</div>
 								</Switch>
