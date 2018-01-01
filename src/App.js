@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { Switch,Route } from 'react-router-dom';
 import { Sidebar, Segment, Button, Menu } from 'semantic-ui-react'
 import fire from './fire';
+import MusicPlayer from './components/MusicPlayer';
 
 class App extends Component{
 	constructor(props){
@@ -20,6 +21,7 @@ class App extends Component{
 			signedIn: false,
 			visible:false
 		}
+		this.setCurrent=this.setCurrent.bind(this)
 	}
 	signOut(){
 		fire.auth().signOut().then(()=>{
@@ -27,6 +29,9 @@ class App extends Component{
 		}).catch((err)=>{
 			console.log(err);
 		})
+	}
+	setCurrent(index){
+		this.setState({current:index})
 	}
 
 	componentWillMount(){
@@ -110,9 +115,11 @@ class App extends Component{
 			            			</div>
 								</Switch>
 							</div>
+							<div id='musicPlayer'></div>
 			            </Segment>
 			          </Sidebar.Pusher>
 			        </Sidebar.Pushable>
+					
 			      </div>
 				:
 				<Login/>

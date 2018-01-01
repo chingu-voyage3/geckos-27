@@ -14,6 +14,7 @@ class Artists extends Component{
 	}
 	render(){
 		return(
+			
 			<div className="Grid">
 				{this.state.result.map(art=>(
 					(art.image)&&(
