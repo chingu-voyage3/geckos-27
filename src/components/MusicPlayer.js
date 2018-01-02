@@ -1,6 +1,6 @@
 import React,{ Component} from 'react';
 import { Icon } from'semantic-ui-react';
-
+import '../style.css';
 
 class MusicPlayer extends Component{
 
@@ -102,7 +102,7 @@ class MusicPlayer extends Component{
 
     render(){
         return(
-            <div>
+            <div className='music'>
                 <button onClick={this.toggle}>
                 {this.state.playing?<Icon name = 'pause' />:<Icon name = 'play' />}
                 </button>

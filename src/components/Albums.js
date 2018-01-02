@@ -32,7 +32,7 @@ class Albums extends Component{
 								<div className="itembox">
 									<NavLink exact to={`/g/${alb.id}`}><img src={alb.image} alt={alb.shorturl} /></NavLink>
 									<div><h4>{alb.name}</h4></div>
-									<button onClick={()=>this.props.changeAlbumId(alb.id)}> play </button>
+									<button onClick={()=>this.props.changeAlbumId(alb.id)}> Play All </button>
 									<div><Download downloadUrl={alb.zip} /></div>
 								</div>
 							</div>
