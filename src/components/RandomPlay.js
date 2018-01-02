@@ -15,7 +15,6 @@ class RandomPlay extends Component{
     this.state={
       result:[],
     }
-    this.renderMusicPlayer=this.renderMusicPlayer.bind(this)
   }
 
   componentDidMount(){
@@ -24,10 +23,6 @@ class RandomPlay extends Component{
     .then((d)=>this.setState({result:d.results}))
   }
 
-  renderMusicPlayer(index){
-    console.log('render called')
-    ReactDOM.render(<MusicPlayer src={this.state.result} current={index}/>,document.getElementById('musicPlayer'))
-  }
 
   render(){
     return(
@@ -37,15 +32,14 @@ class RandomPlay extends Component{
         <div className="GridItem" key={song.id} >
           <div className="itembox" >
             <h6>{song.name}</h6>
-            <img src={song.image} alt={song.shorturl} />
-            <button onClick={()=>this.renderMusicPlayer(index)}>play</button>
+            <img src={song.image} alt={song.shorturl} onClick={()=>this.props.changeReq(index,this.state.result)} />
             <Play url={song.audio} />
             <Download downloadUrl={song.audiodownload} />
           </div>
         </div>
       ))}
       </div>
-      <button onClick={()=>this.renderMusicPlayer(0)}>Play All</button>
+      <button>Play All</button>
     </div>
   )
       }

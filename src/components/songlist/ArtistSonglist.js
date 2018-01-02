@@ -16,10 +16,10 @@ class ArtistSonglist extends Component{
 	render(){
 		return(
 			<div className="Grid">
-				{this.state.result.map(art=>(
+				{this.state.result.map((art, index)=>(
 							<div className="GridItem" key={art.id}>
 								<div className="itembox">
-									<img src={art.image} alt={art.name} />
+									<img src={art.image} alt={art.name} onClick={()=>this.props.changeReq(index,this.state.result)} />
 									<div>{art.name}</div>
 									<Play url={art.audio} />
 									<Download downloadUrl={art.audiodownload} />
