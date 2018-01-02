@@ -12,14 +12,23 @@ import { Link } from 'react-router-dom';
 import { Switch,Route } from 'react-router-dom';
 import { Sidebar, Segment, Button, Menu } from 'semantic-ui-react'
 import fire from './fire';
+import MusicPlayer from './components/MusicPlayer';
 
 class App extends Component{
 	constructor(props){
 		super(props);
 		this.state={
 			signedIn: false,
-			visible:false
+			visible:false,
+			src:null,
+			current:0,
+			albumId:null,
+			artistId:null
 		}
+
+		this.changeReq=this.changeReq.bind(this)
+		this.changeAlbumId=this.changeAlbumId.bind(this)
+		this.changeArtistId=this.changeArtistId.bind(this)
 	}
 	signOut(){
 		fire.auth().signOut().then(()=>{
@@ -28,6 +37,18 @@ class App extends Component{
 			console.log(err);
 		})
 	}
+	changeAlbumId(albumId){
+		this.setState({albumId:albumId})
+	}
+
+	changeArtistId(artistId){
+		this.setState({artistId:artistId})
+	}
+	
+	changeReq(index,url){
+		this.setState({current:index,src:url})
+	}
+
 
 	componentWillMount(){
 		fire.auth().onAuthStateChanged((user)=>{
@@ -100,19 +121,23 @@ class App extends Component{
 							<Sidebar/>
 								<Switch>
 									<div >
-										<Route exact path="/albums" component={Albums} />
+										{/*<--to pass custom props inside Route we need to return the component and use render inplace of component>
+										//<https://github.com/ReactTraining/react-router/issues/4105  for reference>*/}
+										<Route exact path="/albums" render={props => <Albums albumId={this.state.albumId} changeReq={this.changeReq} changeAlbumId={this.changeAlbumId} {...props}/>} />
 										<Route exact path="/radio" component={Radio} />
-										<Route exact path="/artists" component={Artists} />
+										<Route exact path="/artists" render={props => <Artists artistId={this.state.artistId} changeReq={this.changeReq} changeArtistId={this.changeArtistId} {...props}/>} />
 										<Route exact path="/aboutus" component={AboutUs} />
-			              				<Route exact path="/g/:albid" component={AlbumSongList}/>
-			              				<Route exact path="/a/:artid" component={ArtistSongList}/>
-										<Route exact path="/randomplay" component={RandomPlay} />
+			              				<Route exact path="/g/:albid" render={props => <AlbumSongList changeReq={this.changeReq} {...props}/>} />
+			              				<Route exact path="/a/:artid" render={props => <ArtistSongList changeReq={this.changeReq} {...props}/>} />
+										<Route path="/randomplay" render={props => <RandomPlay changeReq={this.changeReq} {...props} />} />	
 			            			</div>
 								</Switch>
 							</div>
+							<MusicPlayer current={this.state.current} src={this.state.src}/>
 			            </Segment>
 			          </Sidebar.Pusher>
 			        </Sidebar.Pushable>
+					
 			      </div>
 				:
 				<Login/>
