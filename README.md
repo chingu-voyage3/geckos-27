@@ -1,29 +1,14 @@
 # geckos-27
+
+[![Hackage-Deps](https://img.shields.io/hackage-deps/v/lens.svg)]()
 ### Repo for making a Spotify clone using React
 
-Upcoming tasks:
-
- * create template
- * ~~integrate github tool~~
- * ~~setup a workflow~~
- * ~~add team members to readMe~~
- * user stories
- * create issues and a lot more....
-
-Tasks done:
- * github integration to slack channel
- * integrate github tool
- * setup a workflow
- * add team members to readMe
-
-### checklist of upcoming tasks
-
-- [ ] finalizing which api
-- [ ] wireframe
-- [ ] react project setup with eslint
-- [ ] react-router and redux(check how to inculcate that)
-- [ ] play one song from a static playlist
-- [ ] populate and manipulate redux store
+### Installation guide
+```
+git clone https://github.com/chingu-voyage3/geckos-27 && cd geckos-27
+npm install
+npm start
+```
 
 ### Workflow for Github (TEAM-MEMBERS)
 * Fork this repository
